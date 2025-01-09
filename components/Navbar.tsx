@@ -24,7 +24,7 @@ const Navbar = () => {
             src={Logo}
             alt="Chess Club Logo"
             height={80}
-            width={80} // Add width to prevent resizing issues
+            width={80} 
           />
         </div>
 
