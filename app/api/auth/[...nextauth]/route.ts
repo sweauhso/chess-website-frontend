@@ -1,10 +1,10 @@
 import { connectMongoDB } from "@/lib/mongodb";
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import mongoose from "mongoose";
 
-export const authOptions = {
+const authOptions = {
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -66,6 +66,8 @@ export const authOptions = {
   },
 };
 
+// ✅ Create NextAuth handler
 const handler = NextAuth(authOptions);
 
+// ✅ Correct exports for Next.js App Router
 export { handler as GET, handler as POST };
