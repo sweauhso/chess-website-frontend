@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "UofC Chess Club Website",
-  description: "Full Stack Chess Club web application.",
+  description: "University of Calgary Chess Club",
 };
 
 export default function RootLayout({
