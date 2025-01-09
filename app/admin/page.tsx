@@ -77,6 +77,7 @@ const Page = () => {
         link: announcementLink,
       });
       alert("Announcement created successfully!");
+      console.log(response)
 
       // Update the announcements list after successful submission
       const updatedAnnouncements = await axios.get("https://chess-club-backend-bd6f865484d6.herokuapp.com/api/v1/announcements");
@@ -102,6 +103,7 @@ const Page = () => {
         link: contactLink,
       });
       alert("Contact created successfully!");
+      console.log(response)
 
       // Update the contacts list after successful submission
       const updatedContacts = await axios.get("https://chess-club-backend-bd6f865484d6.herokuapp.com/api/v1/contact");
@@ -124,6 +126,7 @@ const Page = () => {
         `https://chess-club-backend-bd6f865484d6.herokuapp.com/api/v1/announcements/${selectedAnnouncement}`
       );
       alert("Announcement deleted successfully!");
+      console.log(response)
       // Optionally, re-fetch announcements after deletion to update the list
       const updatedAnnouncements = await axios.get("https://chess-club-backend-bd6f865484d6.herokuapp.com/api/v1/announcements");
       setAnnouncements(updatedAnnouncements.data);
@@ -138,6 +141,7 @@ const Page = () => {
     try {
       const response = await axios.delete(`https://chess-club-backend-bd6f865484d6.herokuapp.com/api/v1/contact/${selectedContact}`);
       alert("Contact deleted successfully!");
+      console.log(response)
       // Optionally, re-fetch contacts after deletion to update the list
       const updatedContacts = await axios.get("https://chess-club-backend-bd6f865484d6.herokuapp.com/api/v1/contact");
       setContacts(updatedContacts.data);
